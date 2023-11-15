@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>McGill University Libraries Centraide 2023</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <style>
+
+      * {
+      box-sizing: border-box
+      }
+      
+      body {
+      font-family: Public Sans, sans-serif;
+      line-height: 1.5;
+      margin: 0;
+      /* color: #111; */
+      /* background-color: #fff */
+
+      background-color: #f4f1f9;
+      color: hsl(265, 40%, 33%);
+
+      background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="800" height="800" opacity=".1"%3E%3Cg fill="none" stroke="hsl(261, 60%, 38%)" stroke-width=".5"%3E%3Cpath d="M0 0h66.667v66.667H0zM66.667 0h66.667v66.667H66.667z"/%3E%3Cpath d="M133.333 0H200v66.667h-66.667zM200 0h66.667v66.667H200z"/%3E%3Cpath d="M266.667 0h66.667v66.667h-66.667z"/%3E%3Cpath d="M333.333 0H400v66.667h-66.667zM400 0h66.667v66.667H400z"/%3E%3Cpath d="M466.667 0h66.667v66.667h-66.667z"/%3E%3Cpath d="M533.333 0H600v66.667h-66.667zM600 0h66.667v66.667H600zM666.667 0h66.667v66.667h-66.667z"/%3E%3Cpath d="M733.333 0H800v66.667h-66.667zM800 0h66.667v66.667H800zM0 66.667h66.667v66.667H0zM66.667 66.667h66.667v66.667H66.667z"/%3E%3Cpath d="M133.333 66.667H200v66.667h-66.667zM200 66.667h66.667v66.667H200z"/%3E%3Cpath d="M266.667 66.667h66.667v66.667h-66.667z"/%3E%3Cpath d="M333.333 66.667H400v66.667h-66.667zM400 66.667h66.667v66.667H400z"/%3E%3Cpath d="M466.667 66.667h66.667v66.667h-66.667z"/%3E%3Cpath d="M533.333 66.667H600v66.667h-66.667zM600 66.667h66.667v66.667H600zM666.667 66.667h66.667v66.667h-66.667z"/%3E%3Cpath d="M733.333 66.667H800v66.667h-66.667zM800 66.667h66.667v66.667H800zM0 133.333h66.667V200H0zM66.667 133.333h66.667V200H66.667z"/%3E%3Cpath d="M133.333 133.333H200V200h-66.667zM200 133.333h66.667V200H200z"/%3E%3Cpath d="M266.667 133.333h66.667V200h-66.667z"/%3E%3Cpath d="M333.333 133.333H400V200h-66.667zM400 133.333h66.667V200H400z"/%3E%3Cpath d="M466.667 133.333h66.667V200h-66.667z"/%3E%3Cpath d="M533.333 133.333H600V200h-66.667zM600 133.333h66.667V200H600zM666.667 133.333h66.667V200h-66.667z"/%3E%3Cpath d="M733.333 133.333H800V200h-66.667zM800 133.333h66.667V200H800zM0 200h66.667v66.667H0zM66.667 200h66.667v66.667H66.667z"/%3E%3Cpath d="M133.333 200H200v66.667h-66.667zM200 200h66.667v66.667H200z"/%3E%3Cpath d="M266.667 200h66.667v66.667h-66.667z"/%3E%3Cpath d="M333.333 200H400v66.667h-66.667zM400 200h66.667v66.667H400z"/%3E%3Cpath d="M466.667 200h66.667v66.667h-66.667z"/%3E%3Cpath d="M533.333 200H600v66.667h-66.667zM600 200h66.667v66.667H600zM666.667 200h66.667v66.667h-66.667z"/%3E%3Cpath d="M733.333 200H800v66.667h-66.667zM800 200h66.667v66.667H800zM0 266.667h66.667v66.667H0zM66.667 266.667h66.667v66.667H66.667z"/%3E%3Cpath d="M133.333 266.667H200v66.667h-66.667zM200 266.667h66.667v66.667H200z"/%3E%3Cpath d="M266.667 266.667h66.667v66.667h-66.667z"/%3E%3Cpath d="M333.333 266.667H400v66.667h-66.667zM400 266.667h66.667v66.667H400z"/%3E%3Cpath d="M466.667 266.667h66.667v66.667h-66.667z"/%3E%3Cpath d="M533.333 266.667H600v66.667h-66.667zM600 266.667h66.667v66.667H600zM666.667 266.667h66.667v66.667h-66.667z"/%3E%3Cpath d="M733.333 266.667H800v66.667h-66.667zM800 266.667h66.667v66.667H800zM0 333.333h66.667V400H0zM66.667 333.333h66.667V400H66.667z"/%3E%3Cpath d="M133.333 333.333H200V400h-66.667zM200 333.333h66.667V400H200z"/%3E%3Cpath d="M266.667 333.333h66.667V400h-66.667z"/%3E%3Cpath d="M333.333 333.333H400V400h-66.667zM400 333.333h66.667V400H400z"/%3E%3Cpath d="M466.667 333.333h66.667V400h-66.667z"/%3E%3Cpath d="M533.333 333.333H600V400h-66.667zM600 333.333h66.667V400H600zM666.667 333.333h66.667V400h-66.667z"/%3E%3Cpath d="M733.333 333.333H800V400h-66.667zM800 333.333h66.667V400H800zM0 400h66.667v66.667H0zM66.667 400h66.667v66.667H66.667z"/%3E%3Cpath d="M133.333 400H200v66.667h-66.667zM200 400h66.667v66.667H200z"/%3E%3Cpath d="M266.667 400h66.667v66.667h-66.667z"/%3E%3Cpath d="M333.333 400H400v66.667h-66.667zM400 400h66.667v66.667H400z"/%3E%3Cpath d="M466.667 400h66.667v66.667h-66.667z"/%3E%3Cpath d="M533.333 400H600v66.667h-66.667zM600 400h66.667v66.667H600zM666.667 400h66.667v66.667h-66.667z"/%3E%3Cpath d="M733.333 400H800v66.667h-66.667zM800 400h66.667v66.667H800zM0 466.667h66.667v66.667H0zM66.667 466.667h66.667v66.667H66.667z"/%3E%3Cpath d="M133.333 466.667H200v66.667h-66.667zM200 466.667h66.667v66.667H200z"/%3E%3Cpath d="M266.667 466.667h66.667v66.667h-66.667z"/%3E%3Cpath d="M333.333 466.667H400v66.667h-66.667zM400 466.667h66.667v66.667H400z"/%3E%3Cpath d="M466.667 466.667h66.667v66.667h-66.667z"/%3E%3Cpath d="M533.333 466.667H600v66.667h-66.667zM600 466.667h66.667v66.667H600zM666.667 466.667h66.667v66.667h-66.667z"/%3E%3Cpath d="M733.333 466.667H800v66.667h-66.667zM800 466.667h66.667v66.667H800zM0 533.333h66.667V600H0zM66.667 533.333h66.667V600H66.667z"/%3E%3Cpath d="M133.333 533.333H200V600h-66.667zM200 533.333h66.667V600H200z"/%3E%3Cpath d="M266.667 533.333h66.667V600h-66.667z"/%3E%3Cpath d="M333.333 533.333H400V600h-66.667zM400 533.333h66.667V600H400z"/%3E%3Cpath d="M466.667 533.333h66.667V600h-66.667z"/%3E%3Cpath d="M533.333 533.333H600V600h-66.667zM600 533.333h66.667V600H600zM666.667 533.333h66.667V600h-66.667z"/%3E%3Cpath d="M733.333 533.333H800V600h-66.667zM800 533.333h66.667V600H800zM0 600h66.667v66.667H0zM66.667 600h66.667v66.667H66.667z"/%3E%3Cpath d="M133.333 600H200v66.667h-66.667zM200 600h66.667v66.667H200z"/%3E%3Cpath d="M266.667 600h66.667v66.667h-66.667z"/%3E%3Cpath d="M333.333 600H400v66.667h-66.667zM400 600h66.667v66.667H400z"/%3E%3Cpath d="M466.667 600h66.667v66.667h-66.667z"/%3E%3Cpath d="M533.333 600H600v66.667h-66.667zM600 600h66.667v66.667H600zM666.667 600h66.667v66.667h-66.667z"/%3E%3Cpath d="M733.333 600H800v66.667h-66.667zM800 600h66.667v66.667H800zM0 666.667h66.667v66.667H0zM66.667 666.667h66.667v66.667H66.667z"/%3E%3Cpath d="M133.333 666.667H200v66.667h-66.667zM200 666.667h66.667v66.667H200z"/%3E%3Cpath d="M266.667 666.667h66.667v66.667h-66.667z"/%3E%3Cpath d="M333.333 666.667H400v66.667h-66.667zM400 666.667h66.667v66.667H400z"/%3E%3Cpath d="M466.667 666.667h66.667v66.667h-66.667z"/%3E%3Cpath d="M533.333 666.667H600v66.667h-66.667zM600 666.667h66.667v66.667H600zM666.667 666.667h66.667v66.667h-66.667z"/%3E%3Cpath d="M733.333 666.667H800v66.667h-66.667zM800 666.667h66.667v66.667H800zM0 733.333h66.667V800H0zM66.667 733.333h66.667V800H66.667z"/%3E%3Cpath d="M133.333 733.333H200V800h-66.667zM200 733.333h66.667V800H200z"/%3E%3Cpath d="M266.667 733.333h66.667V800h-66.667z"/%3E%3Cpath d="M333.333 733.333H400V800h-66.667zM400 733.333h66.667V800H400z"/%3E%3Cpath d="M466.667 733.333h66.667V800h-66.667z"/%3E%3Cpath d="M533.333 733.333H600V800h-66.667zM600 733.333h66.667V800H600zM666.667 733.333h66.667V800h-66.667z"/%3E%3Cpath d="M733.333 733.333H800V800h-66.667zM800 733.333h66.667V800H800zM0 800h66.667v66.667H0zM66.667 800h66.667v66.667H66.667z"/%3E%3Cpath d="M133.333 800H200v66.667h-66.667zM200 800h66.667v66.667H200z"/%3E%3Cpath d="M266.667 800h66.667v66.667h-66.667z"/%3E%3Cpath d="M333.333 800H400v66.667h-66.667zM400 800h66.667v66.667H400z"/%3E%3Cpath d="M466.667 800h66.667v66.667h-66.667z"/%3E%3Cpath d="M533.333 800H600v66.667h-66.667zM600 800h66.667v66.667H600zM666.667 800h66.667v66.667h-66.667z"/%3E%3Cpath d="M733.333 800H800v66.667h-66.667zM800 800h66.667v66.667H800z"/%3E%3C/g%3E%3C/svg%3E');
+      background-repeat: repeat;
+      background-size: 300px 300px;
+      }
+      
+      a {
+      /* color: #07c */ color:inherit
+      }
+
+      h1,h2,h3,h4,h5,h6 {
+      font-weight: 600;
+      line-height: 1.25;
+      margin-top: 1em;
+      margin-bottom: .5em
+      }
+
+      h1 {
+      font-size: 2rem
+      }
+
+      h2 {
+      font-size: 1.5rem
+      }
+
+      h3 {
+      font-size: 1.25rem
+      }
+
+      h4 {
+      font-size: 1rem
+      }
+
+      h5 {
+      font-size: .875rem
+      }
+
+      h6 {
+      font-size: .75rem
+      }
+
+      blockquote,dl,ol,p,pre,ul {
+      margin-top: 1em;
+      margin-bottom: 1em
+      }
+
+
+      .color-inherit{color:inherit}
+      iframe {display:block;margin:30px 0}
+
+      .controls {
+      padding: 1.5rem;
+      /* display: flex; */
+      flex-direction: column;
+      gap: 0.75rem;
+
+      border: 4px solid hsl(265, 40%, 90%);
+      border-radius: 2rem;
+      }
+      
+      span#winning-tickets,span#call-number-output,span#winning-call-number{font-weight:bold}
+
+      input,textarea{background:hsl(265, 40%, 95%)}
+
+      .badge {
+          display: inline-block;
+          min-width: 10px;
+          padding: 3px 7px;
+          font-size: 90%;
+          font-weight: 700;
+          line-height: 1;
+          color: #fff;
+          text-align: center;
+          white-space: nowrap;
+          vertical-align: middle;
+          background-color: #ED1B2F;
+          border-radius: 10px;
+      }
+    </style>
+    <link href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Public+Sans" rel="stylesheet" type="text/css"/>
+    <link rel="shortcut icon" href="https://www.mcgill.ca/sites/all/themes/coltrane19/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <script>// (c) 2016, Mathscribe, Inc. MIT license (see http://jquery.org/license)
+"use strict"
+var jsCurry=function(){function e(t){if("function"==typeof t)return e.curry.apply(void 0,arguments)
+if(2==arguments.length){var r=arguments[1]
+if("string"==typeof t)return r[t].bind(r)
+if("function"==typeof r)return("number"==typeof t?e.aritize:e.partial)(t,r)}return 1==arguments.length||e.err(err_F_1_),"number"==typeof t||"string"==typeof t?e.pToF(t):t&&"object"==typeof t?e.aToF(t):void e.err(err_F_2_)}var t=Array.prototype.slice
+return Function.prototype.bind||(Function.prototype.bind=function(e){var r=this,n=t.call(arguments,1)
+return function(){return r.apply(e,n.concat(t.call(arguments,0)))}}),Array.isArray||(Array.isArray=function(e){return"object"==typeof e&&null!==e&&"[object Array]"===Object.prototype.toString.call(e)}),e.err=function(){throw e.debug,Error("Assertion failed")},e.applyF=function(e,t){return e.apply(void 0,t)},e.curry=function(e){var t=e
+return arguments[0]=void 0,t.bind.apply(t,arguments)},e._={},e.partial=function(r,n){var a=r.length
+return function(){for(var i=t.call(arguments,0),s=0;a>s;s++)r[s]!==e._?i.splice(s,0,r[s]):i.length==s&&i.push(void 0)
+return n.apply(this,i)}},e.o=function(){var e=arguments
+return function(){for(var t=e.length,r=e[--t].apply(void 0,arguments);t>0;)r=e[--t](r)
+return r}},e.oMap=function(t,r){return function(){return e.applyF(t,e.map(r,arguments))}},e.aritize=function(r,n){return function(){return e.applyF(n,t.call(arguments,0,r))}},e.not=function(e){return!e},e.defOr=function(e,t){return void 0!==e?e:t},e.cmpX=function(e,t){return e-t},e.cmpLex=function(t,r,n){return e.any(function(e,r){return r==n.length?1:t(e,n[r])},r)||r.length-n.length},e.eqTo=function(t,r){return r||(r=function(e,t){return e!==t}),e.o(e.not,e(r,t))},e.pToF=function(e){return function(t){return t[e]}},e.aToF=function(e){return function(t){return e[t]}},e.slice=function(e,t,r){if(null==t&&(t=0),Array.isArray(e))return e.slice(t,r)
+var n=e.length
+t=0>t?Math.max(0,n+t):Math.min(n,t),r=void 0===r?n:0>r?Math.max(0,n+r):Math.min(n,r)
+for(var a=[];r>t;)a.push(e[t++])
+return a},e.concatArgs=e.oMap(e("concat",[]),function(t){return Array.isArray(t)?t:e.slice(t)}),e.concatMap=function(t,r){return e.applyF(e.concatArgs,e.map(t,r))},e.findIndex=function(e,t){for(var r=t.length,n=0;r>n;n++)if(e(t[n],n,t))return n
+return-1},e.elemIndex=function(t,r,n){return r.indexOf&&!n&&Array.isArray(r)?r.indexOf(t):e.findIndex(e.eqTo(t,n),r)},e.elem=function(t,r,n){return-1!=e.elemIndex(t,r,n)},e.any=function(e,t){for(var r=t.length,n=!1,a=0;r>a;a++)if(n=e(t[a],a,t))return n
+return n},e.iter=function(r,n){if(2==arguments.length){if(n.forEach&&Array.isArray(n))return n.forEach(r)
+for(var a=n.length,i=0;a>i;i++)r(n[i],i,n)}else{arguments.length>2||e.err(err_iter_)
+for(var s=t.call(arguments,1),a=e.applyF(Math.min,e.map(e("length"),s)),i=0;a>i;i++)e.applyF(r,e.map(e(i),s).concat(i,s))}},e.map=function(e,t){if(t.map&&Array.isArray(t))return t.map(e)
+for(var r=t.length,n=Array(r),a=0;r>a;a++)n[a]=e(t[a],a,t)
+return n},e.sum=function(e){for(var t=e.length,r=0,n=0;t>n;n++)r+=e[n]
+return r},e}(),F
+void 0===F&&(F=jsCurry)
+var jqMath=function(){function e(t,r,n){return"number"==typeof t&&(t+=""),"string"==typeof t||Array.isArray(t)?e.sToMathE(t,r,n):1==t.nodeType&&"math"==t.tagName.toLowerCase()?e.eToMathE(t):void $.err(err_M_)}function t(t,r,n){return null==r||("string"==typeof r?t.appendChild(t.ownerDocument.createTextNode(r)):r.nodeType?t.appendChild(r):(r.constructor!=Array&&(r=$.slice(r)),$.iter(function(e){t.appendChild(e)},r))),e.setAttrs(t,n)}function r(r){function n(t){return i.createElementNS(e.mathmlNS,t)}if(e.MathML&&!O)return r
+var a=r.tagName.toLowerCase(),i=r.ownerDocument
+if("mi"==a)!r.getAttribute("mathvariant")&&r.firstChild&&3==r.firstChild.nodeType&&r.setAttribute("mathvariant",1==r.firstChild.data.length?"italic":"normal")
+else if("mo"==a){if(1==r.childNodes.length&&3==r.firstChild.nodeType){var s=r.firstChild.data;/^[\u2061-\u2064]$/.test(s)&&e.addClass(r,"ma-non-marking")}}else if("mspace"==a)e.webkitVersion&&e.MathML&&(r.style.display="inline-block",r.style.minWidth=r.getAttribute("width")||"0px")
+else if("menclose"==a)e.webkitVersion&&e.MathML&&e.addClass(r,"fm-menclose")
+else if("mmultiscripts"==a&&e.webkitVersion){var l=$.slice(r.childNodes)
+if(0==l.length)throw"Wrong number of <mmultiscripts> arguments: 0"
+for(var o=[l[0]],m=1;m<l.length;m++)if("mprescripts"!=l[m].tagName){if(m+1==l.length)throw"Missing argument in <mmultiscripts>"
+var u=[o[0],l[m],l[m+1]]
+m++,o[0]=n("msubsup"),$.iter(function(e){o[0].appendChild(e)},u)}else o.unshift(n("none"))
+var d=r
+r=t(n("mrow"),o,r.attributes),d.parentNode&&d.parentNode.replaceChild(r,d)}var c=r.getAttribute("mathcolor"),f=r.getAttribute("href")
+if(c&&r.style&&(r.style.color=c),f&&(!e.MathML||e.webkitVersion)){var p=i.createElement("A"),h=r.parentNode,v=r.nextSibling
+p.appendChild(r),p.href=f,r=p,h&&h.insertBefore(r,v)}return r}function n(n,a,i,s){s||(s=document)
+var l=e.MathPlayer?s.createElement("m:"+n):s.createElementNS(e.mathmlNS,n)
+return r(t(l,a,i))}function a(t,r,n,a){if("mo"==n.nodeName.toLowerCase()&&1==n.childNodes.length){var i=n.firstChild,s=i.data
+if(3==i.nodeType&&(t>.9||r>.9)&&(e.prefix_[s]<25||e.postfix_[s]<25||-1!='|\u2016\u221A'.indexOf(s)||a)){var l=(t+r)/1.2,o='\u221A'==s,m=(o?.26:.35)+((o?.15:.25)-r)/l
+n.style.fontSize=l.toFixed(3)+"em",n.style.verticalAlign=m.toFixed(3)+"em",n.fmUp=t,n.fmDn=r,n.style.display="inline-block",n.style.transform=n.style.msTransform=n.style.MozTransform=n.style.WebkitTransform="scaleX(0.5)"}}}function i(e,t,r){var n=document.createElement("span")
+return n.appendChild(r),n.fmUp=e,n.fmDn=t,n.style.verticalAlign=(.5*(e-t)).toFixed(3)+"em",n}function s(e,t){$.iter(function(t){var r=t[0]
+$.iter(function(t){e[t]=r},t[1].split(""))},t)}function l(t,r,n){return e.newMe(t,r,n,H)}function o(){return l("mspace")}function m(t){var r=/\s*([-\w.]*)/g
+r.lastIndex=e.re_.lastIndex
+var n=r.exec(V)
+if(!n[1])throw"Missing "+(t||"word")
+return e.re_.lastIndex=r.lastIndex,n[1]}function u(t){var r=/\s*(?:(["'])|([-\w.]*))/g
+r.lastIndex=e.re_.lastIndex
+var n=r.exec(V)
+if(n[2])return e.re_.lastIndex=r.lastIndex,n[2]
+if(!n[1])throw"Missing "+(t||"string")
+var a=n[1],i=RegExp("[^\\`"+a+"]+|[\\`](.|\n)|("+a+")","g"),s=""
+for(i.lastIndex=r.lastIndex;;){if(n=i.exec(V),!n)throw"Missing closing "+a
+if(n[2])break
+s+=n[1]||n[0]}return e.re_.lastIndex=i.lastIndex,s}function d(t){var r=A()
+if(!r||!r[0])throw"Missing expression argument"+(t?" after "+t:"")+", before position "+e.re_.lastIndex
+return r}function c(e){var t=u("mtext"==e?"text":e)
+return[l(e,t),"mo"==e?t:null]}function f(){if(!e.trustHtml)throw"\\html use requires M.trustHtml"
+var t=u("html"),r=H||document,n=r.createElement("div")
+return n.style.display="inline-block",n.innerHTML=t,1==n.childNodes.length&&(n=n.childNodes[0]),[l("mtext",n),null]}function p(){var t=u("\\sp width")
+return[e.spaceMe(t,H),/^[^-]*[1-9]/.test(t)?'\u2009':null]}function h(){var t=A()
+if(t&&'↖'==t[1]&&!t[0]){var r=I()
+if(t=r[1]||A(),!r[0]||!t||"}"!=t[1]||t[0])throw'Expected an embellished operator and "}" after "{↖", before position '+e.re_.lastIndex
+return r[0]}var n=F(0,t)
+return t=n[1],!t||"}"==t[1]&&!t[0]||$.err(err_braceScan_),[n[0]||o(),null]}function v(t,r){t||(t=m("attribute name"))
+var n=u(t+" attribute"),a=d(t)
+return(!r||e.MathML)&&a[0].setAttribute(t,n),a}function g(){var t="CSS class name(s)",r=u(t),n=d(t)
+return e.addClass(n[0],r),n}function M(t){var r=t||u("mathvariant"),n=d(r),a=n[0]
+if(!$.elem(e.mtagName(a),["mi","mn","mo","mtext","mspace","ms"]))throw"Can only apply a mathvariant to a MathML token (atomic) element, at position "+e.re_.lastIndex
+return a.setAttribute("mathvariant",r),/bold/.test(r)?e.addClass(a,"ma-bold"):("normal"==r||"italic"==r)&&e.addClass(a,"ma-nonbold"),e.addClass(a,/italic/.test(r)?"ma-italic":"ma-upright"),/double-struck/.test(r)?e.addClass(a,"ma-double-struck"):/fraktur/.test(r)?e.addClass(a,"ma-fraktur"):/script/.test(r)?e.addClass(a,"ma-script"):/sans-serif/.test(r)&&e.addClass(a,"ma-sans-serif"),n}function b(e){e||(e=m("tagName"))
+var t=d({menclose:"enclose"}[e]||e)
+return[l(e,t[0]),$.elem(e,["mstyle","mpadded"])?t[1]:null]}function y(e){var t=d(e)
+return $.iter(function(e){e.disabled=!0},t[0].createElement("input")),"vphantom"==e&&(t[0]=l("mpadded",t[0],{width:"0",style:"display: inline-block; width: 0"})),[l("mphantom",t[0]),t[1]]}function _(){return[e.menclose(d("\\ov")[0],{notation:"top"},H),null]}function x(){var t=u("minsize"),r=d("minsize"),n=r[0]
+if("mo"!=e.mtagName(n))throw"Can only stretch an operator symbol, before position "+e.re_.lastIndex
+if(e.MathML)n.setAttribute("minsize",t)
+else{var i=/^(.+)em$/.exec(t)
+i&&(t=i[1])
+var s=+t
+s>1?a(.6*s,.6*s,n,!0):s||(n.style.fontSize=t)}return r}function w(){return[l("mrow",d("\\mrowOne")[0]),null]}function C(){function t(e){return l("mtr",l("mtd",e))}var r=d("\\binom")[0],n=d("\\binom")[0],a=l("mtable",$.map(t,[r,n]))
+return e.addClass(a,"ma-binom"),e.MathML||(a.fmUp-=.41,a.fmDn-=.41),[l("mrow",[l("mo","("),a,l("mo",")")]),null]}function A(){for(var t=e.re_.exec(V);!t;){if(e.re_.lastIndex=V.length,W==Q.length)return null
+var r=Q[W++]
+if("string"==typeof r)e.re_.lastIndex=0,V=r,t=e.re_.exec(V)
+else{if(1==r.nodeType)return[r,null]
+$.err(err_scanTokP_)}}var n=t[2]||t[0],a=null
+if(/^[_^}\u2196\u2199]$/.test(t[0])||t[2]&&e.macro1s_[n])return[null,n]
+if("{"==t[0])return h()
+if(t[2]&&e.macros_[n])return e.macros_[n]()
+if(t[1])return[e.newMe("mn",n,H),null]
+if(/^[,:;!]$/.test(t[2]))n='\u2009'
+else if("/"==t[2])n='\u2215'
+else if(e.alias_[n]&&!t[2]){var i=e.alias_[n]
+"string"==typeof i?n=i:(n=i[0],a=i[1])}var s,o=e.infix_[n]||e.prefix_[n]||e.postfix_[n]?n:null
+if('\u2009'==n)s=e.spaceMe(Z[t[2]||","],H)
+else if(o){if(/^[∛∜]$/.test(n)&&!t[2])return s=l("mn",'∛'==n?"3":"4"),[l("msup",[l("mo",'√'),s]),'√']
+s=e.newMe("mo",n,H),/^[∀∃∄∂∇]$/.test(n)?(s.setAttribute("lspace",".11em"),s.setAttribute("rspace",".06em")):"!"==n?(s.setAttribute("lspace",".06em"),s.setAttribute("rspace","0")):'×'==n&&(s.setAttribute("lspace",".22em"),s.setAttribute("rspace",".22em"))}else s=e.newMe("mi",n,H),t[2]&&1==n.length?(s.setAttribute("mathvariant","normal"),e.addClass(s,"ma-upright"),e.MathML||(s.style.paddingRight="0")):a&&(s.setAttribute("mathvariant",a),e.addClass(s,"ma-upright"),e.addClass(s,"ma-"+a)),/\w\w/.test(n)&&e.addClass(s,"ma-repel-adj")
+return[s,o]}function N(t){var r=F(e.infix_[","]),n=r[1]||A(),a=r[0]
+if(!a){if(t&&(!n||","!=n[1]))return[null,n]
+a=o()}var i=e.mtagName(a)
+return"mtd"==i||"mtr"==i&&t||(a=e.newMe("mtd",a,H)),[a,n]}function k(){var t=u("rowspan"),r=N(),n=r[0]
+return n.setAttribute(e.MathML?"rowspan":"rowSpan",t),e.hasClass(n,"middle")||e.addClass(n,"middle"),r}function E(){var t=u("colspan"),r=N()
+return r[0].setAttribute(e.MathML?"columnspan":"colSpan",t),r}function T(t){for(var r=[];;){var n=N(0==r.length),a=n[0],i=n[1]||A()
+if(a){if("mtr"==e.mtagName(a))return[a,i]
+r.push(a)}if(!i||","!=i[1])return[r.length||!t||i&&";"==i[1]?e.newMe("mtr",r,H):null,i]}}function L(t){void 0===t&&(t=e.dtableQ)
+for(var r=[];;){var n=T(0==r.length),a=n[0],i=n[1]||A()
+if(a&&r.push(a),!i||";"!=i[1])return[l("mtable",r,t?{displaystyle:!0}:void 0),i]}}function S(){var t=F(0)
+return t[0]=e.newMe("math",t[0],H),t}function P(e){var t=Y[e]
+return t&&(t.length<4?"ss":"uo")}function I(t,r){for(;;){if(r||(r=A()),!r||r[0]||!Y[r[1]]){if(r&&!t){t=r,r=null
+continue}return[t,r]}var n=P(r[1]),a=function(){for(var e={},t={};;){if(r||(r=A()),!r||r[0])break
+var a=r[1]
+if(P(a)!=n||t[a])break
+if(t[a]=!0,r=A(),!r||P(r[1])!=n||r[0]){var i=F(999,r)
+e[a]=i[0],r=i[1]}}return e},i=a()
+if("uo"==n||!r||(r[0]?t:"ss"!=P(r[1]))){t||(t=[o(),null])
+var s="m",l=[t[0]]
+$.iter(function(e){i[e]&&(s+=Y[e],l.push(i[e]))},["_","^",'↙','↖']),l.length>1&&(t=[e.newMe(s,l,H),t[1]])}else{for(var m=[i];r&&!r[0]&&"ss"==P(r[1]);)m.push(a())
+if(!t)if(r&&r[0]){t=r,r=A()
+for(var u=[];r&&!r[0]&&"ss"==P(r[1]);)u.push(a())
+m=u.concat(null,m)}else t=[o(),null]
+var l=[t[0]]
+$.iter(function(t){t?l.push(t._||e.newMe("none",void 0,H),t["^"]||e.newMe("none",void 0,H)):l.push(e.newMe("mprescripts",void 0,H))},m),t=[e.newMe("mmultiscripts",l,H),t[1]]}}}function F(t,r){for(var n=null;;){if(!r&&(r=A(),!r))break
+var a=r[1]
+if(!a||n&&(r[0]?!(e.infix_[a]||e.postfix_[a]):e.macro1s_[a]))if(n){if(t>=X)break
+var i=F(X,r),s=i[0]
+s||$.err(err_parse_mxP_tokP_1_)
+var l=e.newMe("mrow",[n,s],H);(e.hasClass(n,"ma-repel-adj")||e.hasClass(s,"ma-repel-adj"))&&(a&&r[0]&&e.prefix_[a]<25||n.parentNode.insertBefore(e.spaceMe(".17em",H),n.nextSibling),e.addClass(l,"ma-repel-adj")),n=l,r=i[1]}else n=r[0],r=null
+else{var o=r[0]
+if(o){var m=e.infix_[a]||e.postfix_[a]
+if(m&&t>=m)break
+var u=e.infix_[a]||!(n&&e.postfix_[a])&&e.prefix_[a]
+!e.MathML&&!n&&u>=290&&350>=u&&(e.addClass(o,"fm-large-op"),o.fmUp=.855,o.fmDn=.705)
+var d=I(r),c=[]
+d[0]||$.err(err_parse_mxP_tokP_embel_)
+var f=d[0][0]
+if(r=d[1],n&&c.push(n),c.push(f),u){var i=F(u,r)
+i[0]&&c.push(i[0]),r=i[1],25>u&&!n&&(r||(r=A()),r&&r[1]&&r[0]&&(e.postfix_[r[1]]||e.infix_[r[1]])==u&&(c.push(r[0]),r=null))}if(1==c.length)n=c[0]
+else if("/"==a&&n&&3==c.length||'\u221A'==a&&!n&&2==c.length)'\u221A'==a&&"msup"==e.mtagName(c[0])?n=e.newMe("mroot",[c[1],e.mchilds(c[0])[1]],H):(c.splice(c.length-2,1),n=e.newMe("/"==a?"mfrac":"msqrt",c,H))
+else{var l=e.newMe("mrow",c,H)
+if('\u2009'==a||(m||u)>=X);else{var p=""
+"="==a?p="infix-loose":2==c.length?(p=n?"postfix":"prefix",e.infix_[a]?p+="-tight":(/^[∀∃∄∂∇]$/.test(a)&&(p="quantifier"),e.addClass(l,"ma-repel-adj"))):n&&(p=","==a||";"==a?"separator":270>=m?"infix-loose":"infix","|"==a&&e.MathML&&"mo"==o.tagName&&(o.setAttribute("lspace",".11em"),o.setAttribute("rspace",".11em"))),e.MathML||!p||o.style.fontSize||e.addClass(f,"fm-"+p)}n=l}}else{if("}"==a)break
+if(e.macro1s_[a]){!n||$.err(err_parse_mxP_tokP_macro_)
+var i=e.macro1s_[a]()
+n=i[0],r=i[1]}else{if(Y[a]||$.err(err_parse_mxP_tokP_script_),t>=999)break
+var d=I(n&&[n,null],r),h=d[0]
+h||$.err(err_parse_mxP_tokP_embel_2_),r=d[1]
+var c=[h[0]],v=h[1]
+if(v){var u=e.infix_[v]||e.prefix_[v]
+if(u){var i=F(u,r)
+i[0]&&c.push(i[0]),r=i[1]}}n=1==c.length?c[0]:e.newMe("mrow",c,H)}}}}return[n,r]}function D(){if(void 0===e.MathML&&(e.MathML=e.canMathML()),e.parseMathQ)try{e.parseMath(document.body)}catch(t){alert(t)}}var $=jsCurry
+Math.sign||(Math.sign=function(e){return e=+e,e>0?1:0>e?-1:e}),Math.trunc||(Math.trunc=function(e){return(0>e?Math.ceil:Math.floor)(e)}),e.getSpecAttrP=function(e,t){var r=e.getAttributeNode(t)
+return r&&r.specified!==!1?r.value:void 0},e.objToAttrs=function(e){var t=[]
+for(var r in e)t.push({name:r,value:e[r]})
+return t},e.setAttrs=function(t,r){return r&&null==r.length&&(r=e.objToAttrs(r)),$.iter(function(e){e.specified!==!1&&t.setAttribute(e.name,e.value)},r||[]),t},e.addClass=function(e,t){if(void 0!==e.className){var r=e.className
+e.className=(r?r+" ":"")+t}else{var r=e.getAttribute("class")
+e.setAttribute("class",(r?r+" ":"")+t)}return e},e.eToClassesS=function(e){var t=void 0!==e.className?e.className:e.getAttribute("class")
+return t||""},e.hasClass=function(t,r){return-1!=(" "+e.eToClassesS(t)+" ").replace(/[\n\t]/g," ").indexOf(" "+r+" ")},e.mathmlNS="http://www.w3.org/1998/Math/MathML"
+var O=!1
+!function(){var t=navigator.userAgent.toLowerCase(),r=t.match(/webkit[ \/](\d+)\.(\d+)/)
+r?(e.webkitVersion=[+r[1],+r[2]],O=e.webkitVersion[0]<=540):(r=t.match(/(opera)(?:.*version)?[ \/]([\w.]+)/)||t.match(/(msie) ([\w.]+)/)||t.indexOf("compatible")<0&&t.match(/(mozilla)(?:.*? rv:([\w.]+))?/),r&&(e[r[1]+"Version"]=r[2]||"0"))}(),e.msieVersion&&document.write('<object id=MathPlayer classid="clsid:32F66A20-7614-11D4-BD11-00104BD3F987">','</object><?IMPORT namespace="m" implementation="#MathPlayer" ?>'),function(){if(self.location){var t=location.search.match(/[?&;]mathml=(?:(off|false)|(on|true))\b/i)
+t?e.MathML=!t[1]:(e.webkitVersion&&$.cmpLex($.cmpX,e.webkitVersion,[537,17])<0||e.operaVersion)&&(e.MathML=!1)}}(),e.canMathML=function(){if(e.msieVersion&&!e.MathPlayer)try{if(new ActiveXObject("MathPlayer.Factory.1"),null==e.MathPlayer)e.MathPlayer=!0
+else if(!e.MathPlayer)return!1}catch(t){e.MathPlayer=!1}if(!e.MathPlayer&&void 0===document.createElementNS)return!1
+var r=n("math",n("mn","1")),a=n("math",n("mfrac",[n("mn","1"),n("mn","2")])),i=document.createElement("div")
+if(void 0===r.style||null===r.style)return!1
+r.setAttribute("display","block"),a.setAttribute("display","block"),r.style.visibility=a.style.visibility="hidden",i.appendChild(r),i.appendChild(a),document.body.appendChild(i)
+var s=a.getBoundingClientRect().height>r.getBoundingClientRect().height+2
+return document.body.removeChild(i),s},e.mtagName=function(e){return"A"==e.tagName&&1==e.childNodes.length&&(e=e.firstChild),e.getAttribute("mtagname")||e.tagName.toLowerCase().replace(/^m:/,"")},e.mchilds=function(e){function t(e){return"SPAN"==e.tagName||$.err(err_span0_),e.firstChild}"A"==e.tagName&&1==e.childNodes.length&&(e=e.firstChild)
+for(var r=e.getAttribute("mtagname");"SPAN"==e.tagName;)e=e.firstChild
+if("TABLE"==e.tagName){if(e=e.firstChild,"TBODY"==e.tagName||$.err(err_mchilds_tbody_),"mtable"==r)return e.childNodes
+var n=e.childNodes
+return"mover"==r?n=[n[1],n[0]]:"munderover"==r&&(n=[n[1],n[2],n[0]]),$.map(function(e){return e.firstChild.firstChild},n)}if("MROW"==e.tagName&&r){var n=e.childNodes
+if("msqrt"==r)return[t(t(n[1]))]
+if("mroot"==r)return[t(t(n[2])),t(n[0])]
+"mmultiscripts"==r||$.err(err_mchilds_mrow_)
+var a=+e.getAttribute("nprescripts")
+a>=0&&a<n.length&&a%2==0||$.err(err_mchilds_mmultiscripts_)
+for(var i=[n[a]],s=a+1;s<n.length;s++)i.push(t(n[s]))
+if(a){i.push(e.ownerDocument.createElement("mprescripts"))
+for(var s=0;a>s;s++)i.push(t(n[s]))}return i}return $.elem(e.tagName,["MSUB","MSUP","MSUBSUP"])?$.map(function(e,r){return r?t(e):e},e.childNodes):"MSPACE"==e.tagName?[]:e.childNodes}
+var U=["mn","mi","mo","mtext","mspace","ms"],j=["fmath","msqrt","mtd","mstyle","merror","mpadded","mphantom","menclose"],B={'\xAF':[0,.85],'\u203E':[0,.85],'\u02D9':[0,.75],'\u02C7':[0,.7],"^":[0,.5],"~":[0,.4],'\u2192':[.25,.25],_:[.7,0],'\u2212':[.25,.45],".":[.6,.1]}
+e.newMe=function(s,l,o,m){if(m||(o&&9==o.nodeType?(m=o,o=void 0):m=document),null!=e.MathML||$.err(err_newMe_MathML_),e.MathML)return n(s,l,o,m)
+"math"==s&&(s="fmath")
+var u=t(m.createElement(s.toUpperCase()),l),d=$.slice(u.childNodes)
+$.elem(s,j)&&1!=d.length&&(d=[e.newMe("mrow",d,void 0,m)],0==u.childNodes.length||$.err(err_newMe_imp_mrow_),u.appendChild(d[0]))
+var c=$.map(function(e){return+(e.fmUp||.6)},d),f=$.map(function(e){return+(e.fmDn||.6)},d)
+if("fmath"==s||"mn"==s||"mtext"==s||"mprescripts"==s||"none"==s);else if("mstyle"==s||"merror"==s||"mpadded"==s||"mphantom"==s||"menclose"==s)d[0].fmUp&&(u.fmUp=d[0].fmUp),d[0].fmDn&&(u.fmDn=d[0].fmDn)
+else if("mi"==s){var p=1==d.length?d[0]:{}
+3==p.nodeType&&1==p.data.length&&(e.addClass(u,"fm-mi-length-1"),"f"==p.data&&(u.style.paddingRight="0.44ex"))}else if("mo"==s){var p=1==d.length?d[0]:{}
+3==p.nodeType&&/[\]|([{?)}]/.test(p.data)&&e.addClass(u,"fm-mo-Luc")}else if("mspace"==s){var h=e.setAttrs(u,o)
+o=void 0,h.style.marginRight=h.getAttribute("width")||"0px",h.style.paddingRight="0.001em",u.innerHTML='\u200C',u.style.visibility="hidden"}else if("mrow"==s){var v=$.applyF(Math.max,c),g=$.applyF(Math.max,f);(v>.65||g>.65)&&(u.fmUp=v,u.fmDn=g,$.iter($([v,g,$._,void 0],a),d))}else if("mfrac"==s){if(2!=d.length)throw"Wrong number of <mfrac> arguments: "+d.length
+var M=m.createElement("td"),b=m.createElement("td")
+M.className="fm-num-frac fm-inline",M.appendChild(d[0]),b.className="fm-den-frac fm-inline",b.appendChild(d[1])
+var y=m.createElement("tr"),_=m.createElement("tr"),x=m.createElement("tbody"),w=m.createElement("table"),C=m.createElement("span")
+y.appendChild(b),_.appendChild(M),x.appendChild(_),x.appendChild(y),w.appendChild(x),C.appendChild(w),C.className="fm-vert fm-frac",u=i(c[0]+f[0]+.03,c[1]+f[1]+.03,C),u.setAttribute("mtagname",s)}else if("msqrt"==s||"mroot"==s){if(d.length!=("msqrt"==s?1:2))throw"Wrong number of <"+s+"> arguments: "+d.length
+u=m.createElement("mrow"),u.setAttribute("mtagname",s)
+var A=.06*(c[0]+f[0]),v=c[0]+A+.1,g=f[0]
+if("mroot"==s){var N=.6*(c[1]+f[1]),k=.25/.6-.25
+v>N?k+=v/.6-c[1]:(k+=f[1],v=N)
+var C=m.createElement("span")
+C.className="fm-root fm-inline",C.appendChild(d[1]),C.style.verticalAlign=k.toFixed(2)+"em",u.appendChild(C)}var E,T=m.createElement("mo"),C=m.createElement("span")
+T.innerHTML='\u221A',T.className="fm-radic",C.appendChild(d[0]),C.className="fm-vert fm-radicand",C.style.borderTopWidth=A.toFixed(3)+"em",E=i(v,g,C),a(v,g,T),u.appendChild(T),u.appendChild(E),u.fmUp=v,u.fmDn=g}else if("msub"==s||"msup"==s||"msubsup"==s||"mmultiscripts"==s){if("mmultiscripts"!=s&&d.length!=("msubsup"==s?3:2))throw"Wrong number of <"+s+"> arguments: "+d.length
+for(var v=c[0],g=f[0],L="msup"==s,S=v/.71-.6,P=g/.71-.6,I=1;I<d.length;I++){if("mmultiscripts"==s){var F=e.mtagName(d[I])
+if("none"==F)continue
+if("mprescripts"==F){if(L)throw'Repeated "mprescripts"'
+L=!0
+continue}}I%2==(L?0:1)?P=Math.max(P,c[I]):S=Math.max(S,f[I])}for(var D=void 0,O=[],U=0,I=1;I<d.length;I++){if("mmultiscripts"==s){var F=e.mtagName(d[I])
+if("mprescripts"==F){D=[],U=d.length-I-1
+continue}}var k=.25/.71-.25
+I%2==(D?0:1)&&"msup"!=s?(k-=P,g=Math.max(g,.71*(P+f[I]))):(k+=S,v=Math.max(v,.71*(S+c[I])))
+var C=document.createElement("span")
+C.className="fm-script fm-inline",d[I].parentNode.insertBefore(C,d[I]),C.appendChild(d[I]),C.style.verticalAlign=k.toFixed(2)+"em",e.msieVersion&&(document.documentMode||e.msieVersion)<8&&(d[I].style.zoom=1),"mmultiscripts"==s&&(D||O).push(d[I].parentNode)}if("mmultiscripts"==s){u=document.createElement("mrow")
+for(var R=(D||[]).concat(d[0],O),I=0;I<R.length;I++)u.appendChild(R[I])
+u.setAttribute("mtagname","mmultiscripts"),u.setAttribute("nprescripts","nPrescripts")}u.fmUp=v,u.fmDn=g}else if("munder"==s||"mover"==s||"munderover"==s){if(d.length!=("munderover"==s?3:2))throw"Wrong number of <"+s+"> arguments: "+d.length
+var z,x=m.createElement("tbody"),v=.85*c[0],g=.85*f[0]
+if("munder"!=s){var q=d[d.length-1],V=void 0
+if(z=m.createElement("td"),z.appendChild(q),"MO"==q.nodeName&&1==q.childNodes.length){var p=q.firstChild
+3==p.nodeType&&(V=B[p.data])}V?(q.style.display="block",q.style.marginTop=(-V[0]).toFixed(2)+"em",q.style.marginBottom=(-V[1]).toFixed(2)+"em",v+=1.2-$.sum(V)):(z.className="fm-script fm-inline",v+=.71*(c[d.length-1]+f[d.length-1]))
+var Q=m.createElement("tr")
+Q.appendChild(z),x.appendChild(Q)}if("MI"==d[0].nodeName&&1==d[0].childNodes.length){var p=d[0].firstChild,W=p.data
+if(3==p.nodeType&&1==W.length){var k=-1!="acegmnopqrsuvwxyz".indexOf(W)?.25:"t"==W?.15:0
+k&&(d[0].style.display="block",d[0].style.marginTop=(-k).toFixed(2)+"em",v-=k)}}z=m.createElement("td"),z.appendChild(d[0]),z.className="fm-underover-base"
+var Q=m.createElement("tr")
+if(Q.appendChild(z),x.appendChild(Q),"mover"!=s){z=m.createElement("td"),z.appendChild(d[1]),z.className="fm-script fm-inline"
+var Q=m.createElement("tr")
+Q.appendChild(z),x.appendChild(Q),g+=.71*(c[1]+f[1])}var C=m.createElement("span"),w=m.createElement("table")
+C.className="fm-vert",w.appendChild(x),C.appendChild(w),u=i(v,g,C),u.setAttribute("mtagname",s)}else if("mtable"==s){for(var x=m.createElement("tbody"),I=0;I<d.length;I++)x.appendChild(d[I])
+u=m.createElement("span"),u.className="fm-vert",u.setAttribute("mtagname","mtable")
+var w=m.createElement("table")
+w.appendChild(x),u.appendChild(w)
+var H=$.sum(c)+$.sum(f)
+u.fmUp=u.fmDn=.5*H}else if("mtr"==s){u=m.createElement("tr")
+for(var I=0;I<d.length;I++)u.appendChild(d[I])
+u.className="fm-mtr",u.setAttribute("mtagname","mtr")
+var v=.6,g=.6
+$.iter(function(t,r){1==(t.getAttribute(e.MathML?"rowspan":"rowSpan")||1)&&(v=Math.max(v,c[r]),g=Math.max(g,f[r]))},d),u.fmUp=v+.25,u.fmDn=g+.25}else{if("mtd"!=s){if("mfenced"==s){var h=e.setAttrs(u,o)
+return e.newMe("mrow",e.mfencedToMRowArgs(h),o,m)}throw"Unrecognized or unimplemented MathML tagName: "+s}u=m.createElement("td")
+for(var I=0;I<d.length;I++)u.appendChild(d[I])
+u.className="fm-mtd",u.setAttribute("mtagname","mtd"),c[0]>.65&&(u.fmUp=c[0]),f[0]>.65&&(u.fmDn=f[0])
+var h=e.setAttrs(u,o)
+o=void 0
+var X=h.getAttribute("rowspan"),Z=h.getAttribute("columnspan")
+X&&(h.setAttribute("rowSpan",X),e.hasClass(h,"middle")||e.addClass(h,"middle")),Z&&h.setAttribute("colSpan",Z)}return r(e.setAttrs(u,o))},e.mfencedToMRowArgs=function(t){function r(t){return e.newMe("mo",t,void 0,n)}"mfenced"==t.tagName.toLowerCase()||$.err(err_mfencedToMRowArgs_)
+var n=t.ownerDocument,a=[r($.defOr(e.getSpecAttrP(t,"open"),"(")),r($.defOr(e.getSpecAttrP(t,"close"),")"))],i=$.slice(t.childNodes)
+if(0==i.length)return a
+var s
+if(1==i.length)s=i[0]
+else{for(var l=$.defOr(e.getSpecAttrP(t,"separators"),",").match(/\S/g),o=l?i.length-1:0,m=0;o>m;m++)i.splice(2*m+1,0,r(l[Math.min(m,l.length-1)]))
+s=e.newMe("mrow",i,void 0,n)}return a.splice(1,0,s),a},e.spaceMe=function(t,r){return e.newMe("mspace",void 0,{width:t},r)},e.fenceMe=function(t,r,n,a){return e.newMe("mrow",[e.newMe("mo",$.defOr(r,"("),a),t,e.newMe("mo",$.defOr(n,")"),a)],a)},$.iter(function(t){e[t]=$(e.newMe,t)},["mn","mi","mo","mtext","mspace","mrow","mfenced","mfrac","msqrt","mroot","msub","msup","msubsup","mmultiscripts","mprescripts","none","munder","mover","munderover","mtable","mtr","mtd","mstyle","merror","mpadded","mphantom","menclose"]),e.setMathBlockQ=function(t,r){return r?(t.setAttribute("display","block"),e.addClass(t,"ma-block")):e.MathML||e.addClass(t,"fm-inline"),t},e.math=function(t,r,n){return e.setMathBlockQ(e.newMe("math",t,n),r)},e.eToMathE=function(t){function n(e){return 1!=e.nodeType?e:($.elem(e.tagName,U)||$.iter(n,e.childNodes),r(e))}function a(t){function r(r){return 3==r.nodeType?/^\s*$/.test(r.data)?[]:[e.mtext(r.data,i)]:8==r.nodeType?[]:(1==t.nodeType||$.err(err_newMeDeep_),[a(r)])}var n=t.tagName.toLowerCase(),s=t.childNodes
+$.elem(n,U)?"mo"==n&&1==s.length&&3==s[0].nodeType&&"-"==s[0].data&&(s=e["-"]):s=$.concatMap(r,s)
+var l=e.newMe(n,s,t.attributes,i)
+return"math"==n&&e.setMathBlockQ(l,"block"==t.getAttribute("display")),l}if((null==e.MathML||"math"!=t.tagName.toLowerCase())&&$.err(err_eToMathE_),e.MathML&&"math"==t.tagName)return O?n(t):t
+var i=t.ownerDocument
+return a(t)},e["-"]='\u2212',e.trimNumS=function(e){return e.replace(/(\d\.\d*?)0+(?!\d)/g,"$1").replace(/(\d)\.(?!\d)/g,"$1").replace(/[-\u2212]0(?![.\d])/g,"0")},e.numS=function(t,r){return r&&(t=e.trimNumS(t)),t.replace(/Infinity/gi,'\u221E').replace(/NaN/gi,"{?}").replace(/e(-\d+)/gi,"\xB710^{$1}").replace(/e\+?(\d+)/gi,"\xB710^$1").replace(/-/g,e["-"])},e.combiningChar_='[\u0300-\u036F\u1DC0-\u1DFF\u20D0-\u20FF\uFE20-\uFE2F]',e.surrPair_='[\uD800-\uDBFF][\uDC00-\uDFFF]'
+var R,z="[\\\\`]([A-Za-z]+|.)"
+e.decimalComma=function(t){if(null!=t){R=t
+var r=(t?"\\d*,\\d+|":"")+"\\d+\\.?\\d*|\\.\\d+"
+e.re_=RegExp("("+r+")|"+z+"|"+e.surrPair_+"|\\S"+e.combiningChar_+"*","g")}return R}
+var q="af|an|ar|av|az|ba|be|bg|bs|ca|ce|co|cs|cu|cv|da|de|el|es|et|eu|fi|fo|fr|gl|hr|hu|hy|id|is|it|jv|kk|kl|kv|lb|lt|lv|mk|mn|mo|nl|no|os|pl|pt|ro|ru|sc|sk|sq|sr|su|sv|tr|tt|ug|uk|vi|yi"
+e.decimalComma(RegExp("^("+q+")\\b","i").test(document.documentElement.lang)),e.infix_={'⊂⃒':240,'⊃⃒':240,'≪̸':260,'≫̸':260,'⪯̸':260,'⪰̸':260,'∽̱':265,'≂̸':265,'≎̸':265,'≏̸':265,'≦̸':265,'≿̸':265,'⊏̸':265,'⊐̸':265,'⧏̸':265,'⧐̸':265,'⩽̸':265,'⩾̸':265,'⪡̸':265,'⪢̸':265,'\u2009':390,"":500},e.prefix_={},e.postfix_={},s(e.infix_,[[21,'|'],[30,';'],[40,',\u2063'],[70,'∴∵'],[100,':'],[110,'϶'],[150,'…⋮⋯⋱'],[160,'∋'],[170,'⊢⊣⊤⊨⊩⊬⊭⊮⊯'],[190,'∨'],[200,'∧'],[240,'∁∈∉∌⊂⊃⊄⊅⊆⊇⊈⊉⊊⊋'],[241,'≤'],[242,'≥'],[243,'>'],[244,'≯'],[245,'<'],[246,'≮'],[247,'≈'],[250,'∼≉'],[252,'≢'],[255,'≠'],[260,'=∝∤∥∦≁≃≄≅≆≇≍≔≗≙≚≜≟≡≨≩≪≫≭≰≱≺≻≼≽⊀⊁⊥⊴⊵⋉⋊⋋⋌⋔⋖⋗⋘⋙⋪⋫⋬⋭■□▪▫▭▮▯▰▱△▴▵▶▷▸▹▼▽▾▿◀◁◂◃'+'◄◅◆◇◈◉◌◍◎●◖◗◦⧀⧁⧣⧤⧥⧦⧳⪇⪈⪯⪰'],[265,'⁄∆∊∍∎∕∗∘∙∟∣∶∷∸∹∺∻∽∾∿≂≊≋≌≎≏≐≑≒≓≕≖≘≝≞≣≦≧≬≲≳≴≵≶≷≸≹≾≿⊌⊍⊎⊏⊐⊑⊒⊓⊔⊚⊛⊜⊝⊦⊧⊪⊫⊰⊱⊲⊳⊶⊷⊹⊺⊻⊼⊽⊾⊿⋄⋆⋇'+'⋈⋍⋎⋏⋐⋑⋒⋓⋕⋚⋛⋜⋝⋞⋟⋠⋡⋢⋣⋤⋥⋦⋧⋨⋩⋰⋲⋳⋴⋵⋶⋷⋸⋹⋺⋻⋼⋽⋾⋿▲❘⦁⦂⦠⦡⦢⦣⦤⦥⦦⦧⦨⦩⦪⦫⦬⦭⦮⦯⦰⦱⦲⦳⦴⦵⦶⦷⦸⦹⦺⦻⦼⦽⦾⦿⧂⧃⧄'+'⧅⧆⧇⧈⧉⧊⧋⧌⧍⧎⧏⧐⧑⧒⧓⧔⧕⧖⧗⧘⧙⧛⧜⧝⧞⧠⧡⧢⧧⧨⧩⧪⧫⧬⧭⧮⧰⧱⧲⧵⧶⧷⧸⧹⧺⧻⧾⧿⨝⨞⨟⨠⨡⨢⨣⨤⨥⨦⨧⨨⨩⨪⨫⨬⨭⨮⨰⨱⨲⨳⨴⨵⨶⨷⨸⨹'+'⨺⨻⨼⨽⨾⩀⩁⩂⩃⩄⩅⩆⩇⩈⩉⩊⩋⩌⩍⩎⩏⩐⩑⩒⩓⩔⩕⩖⩗⩘⩙⩚⩛⩜⩝⩞⩟⩠⩡⩢⩣⩤⩥⩦⩧⩨⩩⩪⩫⩬⩭⩮⩯⩰⩱⩲⩳⩴⩵⩶⩷⩸⩹⩺⩻⩼⩽⩾⩿⪀⪁⪂⪃⪄⪅⪆⪉⪊⪋⪌⪍⪎⪏'+'⪐⪑⪒⪓⪔⪕⪖⪗⪘⪙⪚⪛⪜⪝⪞⪟⪠⪡⪢⪣⪤⪥⪦⪧⪨⪩⪪⪫⪬⪭⪮⪱⪲⪳⪴⪵⪶⪷⪸⪹⪺⪻⪼⪽⪾⪿⫀⫁⫂⫃⫄⫅⫆⫇⫈⫉⫊⫋⫌⫍⫎⫏⫐⫑⫒⫓⫔⫕⫖⫗⫘⫙⫚⫛⫝⫝⫞⫟⫠⫡⫢⫣⫤⫥⫦'+'⫧⫨⫩⫪⫫⫬⫭⫮⫯⫰⫱⫲⫳⫴⫵⫶⫷⫸⫹⫺⫻⫽⫾'],[270,'←↑→↓↔↕↖↗↘↙↚↛↜↝↞↟↠↡↢↣↤↥↦↧↨↩↪↫↬↭↮↯↰↱↲↳↴↵↶↷↸↹↺↻↼↽↾↿⇀⇁⇂⇃⇄⇅⇆⇇⇈⇉⇊⇋⇌⇍⇎⇏⇐⇑'+'⇒⇓⇔⇕⇖⇗⇘⇙⇚⇛⇜⇝⇞⇟⇠⇡⇢⇣⇤⇥⇦⇧⇨⇩⇪⇫⇬⇭⇮⇯⇰⇱⇲⇳⇴⇵⇶⇷⇸⇹⇺⇻⇼⇽⇾⇿⊸⟰⟱⟵⟶⟷⟸⟹⟺⟻⟼⟽⟾⟿⤀⤁⤂⤃⤄'+'⤅⤆⤇⤈⤉⤊⤋⤌⤍⤎⤏⤐⤑⤒⤓⤔⤕⤖⤗⤘⤙⤚⤛⤜⤝⤞⤟⤠⤡⤢⤣⤤⤥⤦⤧⤨⤩⤪⤫⤬⤭⤮⤯⤰⤱⤲⤳⤴⤵⤶⤷⤸⤹⤺⤻⤼⤽⤾⤿⥀⥁⥂⥃⥄⥅⥆⥇⥈⥉⥊⥋⥌⥍⥎⥏⥐⥑⥒'+'⥓⥔⥕⥖⥗⥘⥙⥚⥛⥜⥝⥞⥟⥠⥡⥢⥣⥤⥥⥦⥧⥨⥩⥪⥫⥬⥭⥮⥯⥰⥱⥲⥳⥴⥵⥶⥷⥸⥹⥺⥻⥼⥽⥾⥿⦙⦚⦛⦜⦝⦞⦟⧟⧯⧴⭅⭆'],[275,'+-±−∓∔⊞⊟'],[300,'⊕⊖⊘'],[340,'≀'],[350,'∩∪'],[390,'*.×•\u2062⊠⊡⋅⨯⨿'],[400,'·'],[410,'⊗'],[640,'%'],[650,'\\∖'],[660,'/÷'],[710,'⊙'],[825,'@'],[835,'?'],[850,'\u2061'],[880,'^_\u2064']]),s(e.prefix_,[[10,'‘“'],[20,'([{‖⌈⌊❲⟦⟨⟪⟬⟮⦀⦃⦅⦇⦉⦋⦍⦏⦑⦓⦕⦗⧼'],[230,'∀∃∄'],[290,'∑⨊⨋'],[300,'∬∭⨁'],[310,'∫∮∯∰∱∲∳⨌⨍⨎⨏⨐⨑⨒⨓⨔⨕⨖⨗⨘⨙⨚⨛⨜'],[320,'⋃⨃⨄'],[330,'⋀⋁⋂⨀⨂⨅⨆⨇⨈⨉⫼⫿'],[350,'∏∐'],[670,'∠∡∢'],[680,'¬'],[740,'∂∇'],[845,'ⅅⅆ√∛∜']]),s(e.postfix_,[[10,'’”'],[20,')]}‖⌉⌋❳⟧⟩⟫⟭⟯⦀⦄⦆⦈⦊⦌⦎⦐⦒⦔⦖⦘⧽'],[800,'′♭♮♯'],[810,'!'],[880,'&\'`~¨¯°´¸ˆˇˉˊˋˍ˘˙˚˜˝˷\u0302\u0311‾\u20db\u20dc⎴⎵⏜⏝⏞⏟⏠⏡']])
+var V,Q,W,H,X
+e.macros_={mn:$(c,"mn"),mi:$(c,"mi"),mo:$(c,"mo"),text:$(c,"mtext"),html:f,sp:p,attr:v,attrMML:$(v,null,!0),id:$(v,"id"),dir:$(v,"dir"),cl:g,mv:M,bo:$(M,"bold"),it:$(M,"italic"),bi:$(M,"bold-italic"),sc:$(M,"script"),bs:$(M,"bold-script"),fr:$(M,"fraktur"),ds:$(M,"double-struck"),bf:$(M,"bold-fraktur"),mstyle:$(b,"mstyle"),merror:$(b,"merror"),mpadded:$(b,"mpadded"),phantom:$(y,"phantom"),vphantom:$(y,"vphantom"),enclose:$(b,"menclose"),ov:_,minsize:x,mrowOne:w,binom:C},e.alias_={'-':M['-'],'\'':'\u2032','\u212D':['C','fraktur'],'\u210C':['H','fraktur'],'\u2111':['I','fraktur'],'\u211C':['R','fraktur'],'\u2128':['Z','fraktur'],'\u212C':['B','script'],'\u2130':['E','script'],'\u2131':['F','script'],'\u210B':['H','script'],'\u2110':['I','script'],'\u2112':['L','script'],'\u2133':['M','script'],'\u211B':['R','script'],'\u212F':['e','script'],'\u210A':['g','script'],'\u2134':['o','script']}
+var Z={",":".17em",":":".22em",";":".28em","!":"-.17em"}
+e.dtableQ=!1,e.macro1s_={mtd:N,rowspan:k,colspan:E,mtr:T,dtable:$(L,!0),ttable:$(L,!1),table:$(L,void 0),math:S}
+var Y={_:"sub","^":"sup",'\u2199':"under",'\u2196':"over"}
+return e.sMxAToMe=function(t,r){r||(r=document),e.infix_[""]&&e.infix_[","]||$.err(err_sToMe_1_),void 0===e.MathML&&(e.MathML=e.canMathML()),e.re_.lastIndex=0,V="",Q=Array.isArray(t)?t:[t],W=0,H=r,X=e.infix_[""]
+var n=F(0)
+if(n[1])throw"Extra input:  "+n[1][1]+V.substring(e.re_.lastIndex)+(W<Q.length?"...":"")
+return(e.re_.lastIndex<V.length||W<Q.length)&&$.err(err_sToMe_2_),n[0]||o()},e.sToMathE=function(t,r,n){var a=e.sMxAToMe(t,n)
+return $.elem(e.mtagName(a),["math","fmath"])||(a=e.newMe("math",a,n)),"string"==typeof t&&a.setAttribute("alttext",t),e.setMathBlockQ(a,r)},e.$mathQ=!0,e.inline$$Q=!1,e.parseMath=function(t){if(1==t.nodeType&&"SCRIPT"!=t.tagName)if("MATH"==t.tagName.toUpperCase()){var r=e.eToMathE(t)
+r!=t&&t.parentNode.replaceChild(r,t)}else for(var n=t.firstChild;n;){var a=n.nextSibling
+e.parseMath(n),n=a}else if(3==t.nodeType&&/[$\\]/.test(t.data)){for(var i=t.ownerDocument,s=t.data,l=[],o="",m=/\\([$\\])|\$\$?|\\[([]/g;;){var u=m.lastIndex,d=m.exec(s),c=d?d.index:s.length
+if(c>u&&(o+=s.substring(u,c)),d&&d[1])o+=d[1]
+else{var f,p=-1
+if(d){if(f="\\("==d[0]?"\\)":"\\["==d[0]?"\\]":d[0],m.lastIndex<s.length&&("$"!=d[0]||e.$mathQ))for(p=s.indexOf(f,m.lastIndex);-1!=p&&"\\"==s.charAt(p-1);)p=s.indexOf(f,p+1)
+if(-1==p){o+=d[0]
+continue}}if(o&&(l.push(i.createTextNode(o)),o=""),!d)break
+var h="$$"==d[0]||"\\["==d[0],v=e.sToMathE(s.substring(m.lastIndex,p),h,i)
+if(h&&e.inline$$Q&&$.elem(t.parentNode.nodeName,["P","SPAN"])){var g=i.createElement("div")
+g.appendChild(v),g.style.display="inline-block"
+var M=i.createElement("span")
+M.appendChild(g),M.style.whiteSpace="nowrap",v=M}l.push(v),m.lastIndex=p+f.length}}$.iter(function(e){t.parentNode.insertBefore(e,t)},l),t.parentNode.removeChild(t)}},e.parseMathQ=!0,"complete"===document.readyState||document.readyState&&"loading"!==document.readyState&&!document.documentElement.doScroll?D():document.addEventListener?document.addEventListener("DOMContentLoaded",D,!1):window.attachEvent("onload",D),e}(),M
+void 0===M&&(M=jqMath)</script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
+    <script type="text/javascript">
+      function convert_tickets() {
+        with(document.getElementById("tickets-pricing")) {
+          const d=Math.floor(Math.pow(dollars.value,(9/8))+0.5*dollars.value);
+          if(d>=0)
+            tickets.value=d;
+          else
+            tickets.value="";
+        }
+      }
+
+      // https://stackoverflow.com/a/19270021
+      function getRandomWithSeed(arr, n, seed = undefined) {
+        Math.seedrandom(seed);
+        var result = new Array(n),
+        len = arr.length, taken = new Array(len);
+        if (n > len)
+          throw new RangeError("getRandomWithSeed: more elements taken than available");
+        while (n--) {
+          var x = Math.floor(Math.random() * len);
+          result[n] = arr[x in taken ? taken[x] : x];
+          taken[x] = --len in taken ? taken[len] : len;
+        }
+        return result;
+      }
+
+      function draw_tickets() {
+        with(document.getElementById("tickets-drawing")) {
+          let results = getRandomWithSeed(Array.from({length: tickets_sold.value}, (_, i) => i + 1), prizes.value, tickets_seed.value);
+          document.getElementById("winning-tickets").innerHTML = results.join(", ");
+        }
+      }
+
+      function convert_call_numbers() {
+        with(document.getElementById("call-numbers-pricing")) {
+          const d=Math.floor(Math.pow(dollars.value,(9/8))+0.5*dollars.value);
+          if(d>=0)
+            call_numbers.value=d;
+          else
+            call_numbers.value="";
+        }
+      }
+
+      function randomly_select_materials() {
+        with(document.getElementById("call-numbers-randomly-play")) {
+          if (call_numbers_to_play.value >= 1) {
+            let results = getRandomWithSeed(allMaterials, call_numbers_to_play.value);
+            selected_call_numbers.value = results.join("\n");
+          }
+        }
+      }
+
+      function search_materials() {
+        with(document.getElementById("call-numbers-validate")) {
+          if (allMaterials.includes(call_number_input.value)) {
+            document.getElementById("call-number-output").innerHTML = "Found " + call_number_input.value;
+          }
+          else {
+            document.getElementById("call-number-output").innerHTML = call_number_input.value + " not found";
+          }
+        }
+      }
+
+      function draw_call_number() {
+        with(document.getElementById("call-numbers-drawing")) {
+          let results = getRandomWithSeed(allMaterials, 1, call_numbers_seed.value);
+          document.getElementById("winning-call-number").innerHTML = results[0];
+        }
+      }
+
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+          allMaterials = JSON.parse(xmlhttp.responseText);
+          Array.from(document.getElementsByTagName("svg")).forEach(ball => ball.parentElement.remove());
+        }
+      }
+      xmlhttp.open('GET', 'materials.json', true);
+      xmlhttp.send();
+    </script>
+  </head>
+  <body>
+    <div class="max-width-4 mx-auto mb4">
+      <h1 class="center">McGill University Libraries Centraide 2023</h1>
+      <p>The University’s 2023 Centraide campaign begins November 13. Celebrating its 50<sup>th</sup> year, <a href="https://www.centraide-mtl.org/en/">Centraide of Greater Montreal</a> supports a network of 375 agencies and joint projects every year.</p>
+      <p>When you give to Centraide, you help the lives of one in five people in Greater Montreal. The community organizations that Centraide supports provide direct aid to Montrealers in need, reducing social exclusion, supporting academic and social success, and improving conditions for those living in poverty.</p>
+      <iframe class="mx-auto" width="560" height="315" src="https://www.youtube.com/embed/NNGbgU4dbyU?si=u1-cJOEpHBdLg6fX" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <p>There are many ways to give! The easiest way is through payroll deduction. Sign up by following the personalized link included in the emails you receive from the Centraide campaign to your McGill email account. Once on the Centraide website, select the payment option, “payroll deduction,” and specify the total amount you want to give.
+      <p>All the Libraries’ activities this year are paid by <em>Interac</em> e-Transfer or cash except for the HQ game, which uses the Artez platform and accepts credit card payment. If paying by e-Transfer, <em>please make separate transfers for each activity</em> (e.g., one e-Transfer to buy raffle tickets, another e-Transfer to participate in the 50/50 lottery).
+
+      <section id="raffle" class="py4">
+
+      <h2 class="h1"><a href="#raffle" class="color-inherit text-decoration-none hover-underline">Activity #1: Raffle</a></h2>
+      <span class="badge">Open to McGill Libraries staff</span>
+      <p>We are raffling away a number of items, including gift certificates and gift baskets, and the trove is still growing! Staff members can purchase virtual raffle tickets for a chance to win these goodies. The list of what is being raffled will be made available here in the coming days as it is being finalized.</p>
+      <p>Raffle tickets are priced according to the following formula:</p>
+      <blockquote>$$t(d)=⌊√^8{d}^9+1/2d⌋$$</blockquote>
+      <p>For example, a \$1 donation will get you one raffle ticket, a \$5 donation will get you eight raffle tickets, a \$10 donation will get you 18 raffle tickets, and a \$20 donation will get you 39 raffle tickets! You can use this calculator to determine how many tickets you would like to buy. Simply adjust the dollars field by clicking on the increment/decrement (▲/▼) buttons.</p>
+      <form id="tickets-pricing">
+        <table class="mx-auto">
+          <tbody>
+            <tr>
+              <td><input type="number" step="1" name="dollars" onchange="convert_tickets()" value="1"></td>
+              <td>dollars donated = </td>
+              <td><input type="text" name="tickets" value="1" readonly size="4" maxlength="4"></td>
+              <td>tickets purchased</td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+      <p>In early December, raffle numbers will be drawn using the form below. For the random seed, we will use the 16 (zero-padded) digits of the December 5 LOTTO MAX Main Draw (including the bonus number).</p>
+      <form id="tickets-drawing" class="controls">
+        <p>
+        <span>Drawing </span>
+        <input type="number" step="1" name="prizes" onchange="draw_tickets()" value="1">
+        <span>prizes from </span>
+        <input type="number" step="1" name="tickets_sold" onchange="draw_tickets()" value="1">
+        <span>tickets sold using a random seed of </span>
+        <input type="text" name="tickets_seed" onchange="draw_tickets()" size="16" maxlength="16">
+        <span>,</span>
+        </p>
+        <p>
+        <span>the winning tickets are </span>
+        <span id="winning-tickets"></span>
+        </p>
+      </form>
+      <p>To participate, send an <em>Interac</em> e-Transfer to Scott Goldstein (<a href="mailto:scott.goldstein@mcgill.ca">scott.goldstein@mcgill.ca</a>). In your message, include “Raffle tickets” along with your name. You may also purchase in person with cash from Graeme Langdon at Schulich Library. Deadline to purchase is December 4.</p>
+
+      </section>
+
+      <section id="call-number-50-50" class="py4">
+
+      <h2 class="h1"><a href="#call-number-50-50" class="color-inherit text-decoration-none hover-underline">Activity #2: I’m thinking of a call number (50/50 lottery)</a></h2>
+      <span class="badge">Open to McGill Libraries staff</span>
+
+      <p>This is a traditional 50/50 lottery but with a library-oriented twist: Instead of selecting lottery numbers, participants select Library of Congress call numbers from our collection!</p>
+      <p>For this activity, the universe of possible call numbers is somewhat artificial. We use our Circulation Item Inventory report from October 22, which does not include electronic resources, and we further filter it (imperfectly!) to arrive at a list of items with LC call numbers. Finally, we deduplicate it so a given call number only appears once.</p>
+      <p>Just like the raffle, the relationship between how much you donate and how many call numbers you can “play” is given by</p>
+      <blockquote>$$c(d)=⌊√^8{d}^9+1/2d⌋$$</blockquote>
+      <form id="call-numbers-pricing">
+        <table class="mx-auto">
+          <tbody>
+            <tr>
+              <td><input type="number" step="1" name="dollars" onchange="convert_call_numbers()" value="1"></td>
+              <td>dollars donated = </td>
+              <td><input type="text" name="call_numbers" value="1" readonly size="4" maxlength="4"></td>
+              <td>call numbers available to play</td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+      <p>You can pick any call numbers you like, but first validate them to make sure they appear in my list. Simply type the call number below and press “Validate.”</p>
+      <form id="call-numbers-validate">
+        <table class="mx-auto">
+          <tbody>
+            <tr>
+              <td>LC call number: </td>
+              <td><input type="search" id="call_number_input"></td>
+              <td><input type="button" value="Validate" onclick="search_materials()"></td>
+              <td><span id="call-number-output"></span></td>
+              <td><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><style>.spinner_7WDj{transform-origin:center;animation:spinner_PBVY .75s linear infinite}@keyframes spinner_PBVY{100%{transform:rotate(360deg)}}</style><path d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,19a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z" opacity=".25"/><circle class="spinner_7WDj" cx="12" cy="2.5" r="1.5"/></svg></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+      <p>Alternatively (and much more convenient), you can randomly draw $n$ valid call numbers from the list and play those. Simply pick how many call numbers you would like and click “Select.”</p>
+      <form id="call-numbers-randomly-play">
+        <table class="mx-auto">
+          <tbody>
+            <tr>
+              <td>Randomly select </td>
+              <td><input type="number" name="call_numbers_to_play"></td>
+              <td>call numbers to play: </td>
+              <td><input type="button" value="Select" onclick="randomly_select_materials()"></td>
+              <td><textarea name="selected_call_numbers" rows="5" cols="28" readonly></textarea></td>
+              <td><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><style>.spinner_7WDj{transform-origin:center;animation:spinner_PBVY .75s linear infinite}@keyframes spinner_PBVY{100%{transform:rotate(360deg)}}</style><path d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,19a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z" opacity=".25"/><circle class="spinner_7WDj" cx="12" cy="2.5" r="1.5"/></svg></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+      <p>Once you have donated, submit your call numbers, one per line, using <a href="https://forms.office.com/r/EhdSvs8nnp">this Microsoft Form</a>. In early December, one call number from our OCLC universe will be drawn using the form below. For the random seed, we will use the 16 (zero-padded) digits of the December 5 LOTTO MAX Main Draw (including the bonus number).</p>
+      <form id="call-numbers-drawing" class="controls">
+        <p>
+          <span>Using a random seed of </span>
+          <input type="text" name="call_numbers_seed" onchange="draw_call_number()">
+          <span>, the winning call number is </span>
+          <span id="winning-call-number"></span>
+        </p>
+      </form>
+      <p>The person who selected the call number that is <em>closest</em> to the randomly drawn call number wins half the total pot, with the other half going to Centraide.</p>
+      <p>To participate, send an <em>Interac</em> e-Transfer to Scott Goldstein (<a href="mailto:scott.goldstein@mcgill.ca">scott.goldstein@mcgill.ca</a>). In your message, include “50/50” along with your name. You may also purchase in person with cash from Graeme Langdon at Schulich Library. Once again, after you donate, be sure to submit your call numbers using <a href="https://forms.office.com/r/EhdSvs8nnp">our Microsoft Form</a>. Deadline to purchase is December 4.</p>
+
+      </section>
+
+      <section id="pet-photo-painting" class="py4">
+
+      <h2 class="h1"><a href="#pet-photo-painting" class="color-inherit text-decoration-none hover-underline">Activity #3: Pet photo and painting prints</a></h2>
+      <span class="badge">Open to McGill Libraries staff</span>
+
+      <p>Interested in getting a beautiful glossy or satin print of your favourite pet? Print your pet photo as is or turn it into a <em>watercolour</em> painting, “<em>poster edges</em>” painting or an <em>oil</em> painting. Choose one of two options of finish: <em>Glossy</em> with deep black shades or <em>satin</em> for a soft contrast image. Under normal conditions, your prints will last between 25 and 50 years!</p>
+      <p>Price is \$10 per 8×10″ print or \$10 for three 5×7″ prints.</p>
+
+      <div class="mx-auto">
+        <div class="clearfix">
+          <div class="sm-col sm-col-3"><figure><img src="neo-original.jpg" alt="Neo the cat" width="200px"><figcaption>Original</figcaption></figure></div>
+          <div class="sm-col sm-col-3"><figure><img src="neo-watercolour.jpg" alt="Neo the cat" width="200px"><figcaption>Watercolour</figcaption></figure></div>
+          <div class="sm-col sm-col-3"><figure><img src="neo-poster-edges.jpg" alt="Neo the cat" width="200px"><figcaption>“Poster edges”</figcaption></figure></div>
+          <div class="sm-col sm-col-3"><figure><img src="neo-oil.jpg" alt="Neo the cat" width="200px"><figcaption>Oil</figcaption></figure></div>
+        </div>
+      </div>
+
+      <p>To participate, send an <em>Interac</em> e-Transfer to Scott Goldstein (<a href="mailto:scott.goldstein@mcgill.ca">scott.goldstein@mcgill.ca</a>). In your message, include “Pet photo” along with your name. You may also purchase in person with cash from Graeme Langdon at Schulich Library. Once you have paid, send an email to Joel Natanblut (<a href="mailto:joel.natanblut@mcgill.ca">joel.natanblut@mcgill.ca</a>) with your pet photo attached. Include your choice of the effect, finish, and size of print(s). Deadline to email Joel is December 1.</p>
+
+        </section>
+
+        <section id="recital" class="py4">
+
+        <h2 class="h1"><a href="#recital" class="color-inherit text-decoration-none hover-underline">Activity #4: Recital</a></h2>
+        <span class="badge">Open to the public</span>
+
+        <p>Please join us on December 6 at 2:30pm in <a href="https://www.mcgill.ca/music/about-us/halls/clara-lichtenstein-hall">Clara Lichtenstein Hall</a> for a short voice and piano recital at 3:00pm presented by Houman Behzadi and Louise Pelletier. In support of this year’s Campaign, they will perform songs that address love, hope, yearning, and compassion. Program details will be included here as they are finalized.</p>
+        <p>After the recital, join us for some light refreshments and wine.</p>
+        <p>Ticket price is \$30. To participate, send an <em>Interac</em> e-Transfer to Scott Goldstein (<a href="mailto:scott.goldstein@mcgill.ca">scott.goldstein@mcgill.ca</a>). In your message, include “Recital” along with your name. You may also purchase in person with cash from Graeme Langdon at Schulich Library. Deadline to purchase is December 5. Note that space in the hall is limited to approximately 50 people.</p>
+
+        </section>
+
+        <section id="hq" class="py4">
+
+        <h2 class="h1"><a href="#hq" class="color-inherit text-decoration-none hover-underline">Activity #5: McGill Libraries HQ (10-second trivia game via Zoom)</a></h2>
+        <span class="badge">Open to the McGill community</span>
+        <p>November is <a href="https://games.ala.org/international-games-month/">International Games Month</a>. Before it comes to a close, let’s play our own version of HQ Trivia, the smartphone trivia game that seemed to take the world by storm six years ago.</p>
+        <p>The competition is open to the McGill community and will be played via Zoom November 27–30 from 12:00 to 12:10 each afternoon. Players are asked 10 multiple-choice questions in increasing order of difficulty and have just 10 seconds to answer each question. Everyone is welcome to play along, but only those who have donated are eligible to win the grand prize. Players’ cumulative score is calculated based on their $n$ highest-scoring days, where $n$ is equal to the number of E-Tickets purchased. An E-Ticket is \$4 and gets you entry to one game, so purchasing four E-Tickets and playing all four days is your best shot at winning the grand prize.</p>
+        <p>The participant with the highest score wins \$100 cash! (Rapidity of response will be used to break a tie if necessary.)</p>
+        <!-- login/email/mic/webcam/typing/headphones -->
+        <p>Zoom login information and other details will be available here early next week.</p>
+        <p>Purchase your E-Tickets on <a href="https://centraidemtl.org/mcgill-activities-2023">Centraide’s Artez platform</a>. Deadline to purchase is December 1.</p>
+        </section>
+
+    </div>
+  </body>
+</html>
